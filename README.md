@@ -3,6 +3,6 @@ Trabalho desenvolvido para a disciplina de auditoria de sistemas - Exemplo de sq
 
 ## Equipe
 - Fellipe Geraldo
+- Jefferson
 - Mateus Antunes
 - Matheus Honorato
-- Jefferson
