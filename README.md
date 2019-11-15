@@ -6,3 +6,7 @@ Trabalho desenvolvido para a disciplina de auditoria de sistemas - Exemplo de sq
 - Jefferson
 - Mateus Antunes
 - Matheus Honorato
+
+# executar em input e-mail
+
+teste@teste.com'; DROP TABLE users;
