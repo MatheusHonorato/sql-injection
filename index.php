@@ -29,13 +29,13 @@
 </head>
 <body>
     <?php if(isset($row) and $row == false) :?>
-        <div class="error-message">
+        <div class="title-message">
              <h1 class="colored">Credenciais incorretas!</h1>
         </div>
     <?php endif; ?>
 
     <?php if( $_SESSION['user'] != null) :?>
-        <div class="success-message">
+        <div class="title-message">
              <h1 class="colorgreen">Você está logado!</h1>
         </div>
         <form  method="POST" action="logout.php">

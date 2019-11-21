@@ -20,13 +20,13 @@ img {
   height: auto;
 }
 
-.error-message {
-	background: #ccc;
-	height: 40px;
-	width: 100%;
+/*End reset*/
+
+body {
+	 background: #FEE09D;
 }
 
-.success-message {
+.title-message {
 	background: #ccc;
 	height: 40px;
 	width: 100%;
