@@ -6,9 +6,12 @@
     if(!empty($_POST['email'])){
         //var_dump("SELECT * FROM pessoa WHERE email = '{$_POST['email']}' AND password = '{$_POST['password']}'");
         try {
+
+            $email_form =  addslashes($_POST['email']);
+            $password_form =  addslashes($_POST['password']);       
             $conn = new PDO('mysql:host=localhost;dbname=sql_injection', $username, $password);
-            $stmt = $conn->query("SELECT * FROM users WHERE email = '{$_POST['email']}' AND password = '{$_POST['password']}'");
-            
+            $stmt = $conn->query("SELECT * FROM users WHERE email = '".$email_form."' AND password = '".$password_form."' ");
+             
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             $_SESSION['user'] = $row; 
         } catch (PDOException $e) {

@@ -14,3 +14,6 @@ Trabalho desenvolvido para a disciplina de auditoria de sistemas - Exemplo de sq
 ### executar em input e-mail (apaga a tabela users)
 
 teste@teste.com'; DROP TABLE users;
+
+
+###Como protejer : http://www.digitaldev.com.br/2011/09/22/sql-injection-como-evitar-esse-tipo-de-ataque-em-paginas-php/
