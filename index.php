@@ -4,7 +4,6 @@
     $password = '';
  
     if(!empty($_POST['email'])){
-        //var_dump("SELECT * FROM pessoa WHERE email = '{$_POST['email']}' AND password = '{$_POST['password']}'");
         try {
 
             $email_form =  addslashes($_POST['email']);
@@ -37,7 +36,7 @@
         </div>
     <?php endif; ?>
 
-    <?php if( $_SESSION['user'] != null) :?>
+    <?php if( isset($_SESSION['user']) and $_SESSION['user'] != null) :?>
         <div class="title-message">
              <h1 class="colorgreen">Você está logado!</h1>
         </div>
