@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $username = 'root';
     $password = '';
  
@@ -7,8 +8,9 @@
         try {
             $conn = new PDO('mysql:host=localhost;dbname=sql_injection', $username, $password);
             $stmt = $conn->query("SELECT * FROM users WHERE email = '{$_POST['email']}' AND password = '{$_POST['password']}'");
-            $row = $stmt->fetch(PDO::FETCH_OBJ);
-            var_dump($row);
+            
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $_SESSION['user'] = $row; 
         } catch (PDOException $e) {
             var_dump($e->getMessage());
         }
@@ -25,6 +27,12 @@
     <title>Sql injection example</title>
 </head>
 <body>
+    <?php if( $_SESSION['user'] != null) :?>
+        <h1>Você está logado!</h1>
+        <form  method="POST" action="logout.php">
+            <button type="submit"> Sair</button>
+        </form>
+    <?php else: ?>    
     <h1>Login</h1>
     <form method="POST">
         <input type="text" name="email"/>
@@ -32,5 +40,6 @@
 
         <button type="submit">Entrar</button>
     </form>
+    <?php endif; ?>  
 </body>
 </html>

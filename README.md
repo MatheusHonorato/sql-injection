@@ -8,6 +8,9 @@ Trabalho desenvolvido para a disciplina de auditoria de sistemas - Exemplo de sq
 - Matheus Honorato
 - Wesley Rodrigues
 
-### executar em input e-mail
+### executar no input password
+' or '1'='1
+
+### executar em input e-mail (apaga a tabela users)
 
 teste@teste.com'; DROP TABLE users;
