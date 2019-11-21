@@ -25,14 +25,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sql injection example</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <?php if(isset($row) and $row == false) :?>
+        <div class="error-message">
+             <h1 class="colored">Credenciais incorretas!</h1>
+        </div>
+    <?php endif; ?>
+
     <?php if( $_SESSION['user'] != null) :?>
-        <h1>Você está logado!</h1>
+        <div class="success-message">
+             <h1 class="colorgreen">Você está logado!</h1>
+        </div>
         <form  method="POST" action="logout.php">
             <button type="submit"> Sair</button>
         </form>
-    <?php else: ?>    
+    <?php else: ?>   
     <h1>Login</h1>
     <form method="POST">
         <input type="text" name="email"/>
