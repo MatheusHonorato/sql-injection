@@ -5,9 +5,10 @@
  
     if(!empty($_POST['email'])){
         try {
-
-            $email_form =  addslashes($_POST['email']);
-            $password_form =  addslashes($_POST['password']);       
+             $email_form =  $_POST['email']; 
+             $password_form =  $_POST['password'];  
+            // $email_form =  addslashes($_POST['email']);
+           // $password_form =  addslashes($_POST['password']);       
             $conn = new PDO('mysql:host=localhost;dbname=sql_injection', $username, $password);
             $stmt = $conn->query("SELECT * FROM users WHERE email = '".$email_form."' AND password = '".$password_form."' ");
              
